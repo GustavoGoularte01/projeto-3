@@ -1,0 +1,173 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #34445a;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    padding: 30px 15px;
+}
+
+.painel {
+    background-color: #fff;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 18px;
+    border: 1px solid #e0e6ed;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #34445a;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.campos {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 6px;
+}
+
+input {
+    width: 100%;
+    min-width: 0;
+    padding: 10px 8px;
+    border: 1px solid #b9c8d9;
+    border-radius: 4px;
+    color: #34445a;
+    font-size: 13px;
+}
+
+button {
+    border: none;
+    border-radius: 4px;
+    padding: 11px 10px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.btn-adicionar {
+    background-color: #399447;
+    color: white;
+}
+
+.filtro {
+    margin-top: 12px;
+    padding: 10px;
+    border: 1px dashed #c7d2df;
+    border-radius: 5px;
+}
+
+.filtro label {
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.campos-filtro {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 6px;
+    align-items: center;
+}
+
+.campos-filtro button {
+    background-color: #536b89;
+    color: white;
+}
+
+.tabela-container {
+    margin-top: 15px;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 10px 4px;
+    border-bottom: 1px solid #e6ebf1;
+}
+
+th {
+    color: #34445a;
+    font-size: 13px;
+}
+
+td {
+    overflow-wrap: anywhere;
+}
+
+th:first-child,
+td:first-child {
+    white-space: nowrap;
+}
+
+#mensagemVazia {
+    padding: 12px 0;
+    color: #718096;
+    font-size: 13px;
+}
+
+.resumo {
+    background-color: #e3f3fc;
+    border-radius: 5px;
+    padding: 12px;
+    margin-top: 12px;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.resumo strong {
+    color: #176da3;
+}
+
+.btn-excluir {
+    width: 100%;
+    margin-top: 15px;
+    background-color: #cf4148;
+    color: white;
+}
+
+@media (max-width: 380px) {
+    .painel {
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    .campos-filtro {
+        grid-template-columns: 1fr;
+    }
+}

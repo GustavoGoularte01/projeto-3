@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Diário de Gastos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <section class="painel" aria-labelledby="titulo">
+            <h1 id="titulo">Controle Diário de Gastos</h1>
+
+            <form id="formDespesa">
+                <div class="campos">
+                    <input
+                        type="text"
+                        id="descricao"
+                        placeholder="Descrição (Ex: Mercado)"
+                        aria-label="Descrição da despesa"
+                        required
+                    >
+
+                    <input
+                        type="number"
+                        id="valor"
+                        placeholder="R$"
+                        aria-label="Valor da despesa"
+                        min="0.01"
+                        step="0.01"
+                        required
+                    >
+                </div>
+
+                <input
+                    type="date"
+                    id="data"
+                    aria-label="Data da despesa"
+                    required
+                >
+
+                <button type="submit" class="btn-adicionar">
+                    Adicionar Despesa
+                </button>
+            </form>
+
+            <section class="filtro" aria-label="Filtro de despesas">
+                <label for="filtroData">Filtrar despesas por data:</label>
+
+                <div class="campos-filtro">
+                    <input type="date" id="filtroData">
+
+                    <button type="button" id="btnTodas">
+                        Ver Todas
+                    </button>
+                </div>
+            </section>
+
+            <section class="tabela-container" aria-label="Despesas cadastradas">
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">Data</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Valor</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="listaDespesas">
+                        <!-- As despesas aparecem aqui -->
+                    </tbody>
+                </table>
+
+                <p id="mensagemVazia" hidden>
+                    Nenhuma despesa encontrada.
+                </p>
+            </section>
+
+            <section class="resumo" aria-live="polite">
+                <p>
+                    Itens exibidos:
+                    <strong id="quantidade">0</strong>
+                    <span id="tipoFiltro">(Todas as datas)</span>
+                </p>
+
+                <p>
+                    Total gasto:
+                    <strong id="total">R$ 0,00</strong>
+                </p>
+            </section>
+
+            <button type="button" id="btnExcluirTudo" class="btn-excluir">
+                Excluir Todas as Despesas
+            </button>
+        </section>
+    </main>
+
+</body>
+</html>

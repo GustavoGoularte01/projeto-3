@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Reflexos</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="jogo">
+        <header>
+            <h1>Jogo de Reflexos</h1>
+            <p>Clique no alvo o máximo de vezes possível!</p>
+        </header>
+
+        <section class="informacoes" aria-label="Informações da partida">
+            <p>
+                Tempo:
+                <output id="tempo" aria-live="off">10</output>
+                segundos
+            </p>
+
+            <p>
+                Pontuação:
+                <output id="pontuacao">0</output>
+            </p>
+        </section>
+
+        <section class="controles" aria-label="Controles">
+            <button id="iniciar" type="button">
+                Iniciar jogo
+            </button>
+        </section>
+
+        <section
+            id="area-jogo"
+            aria-label="Área de jogo"
+        >
+            <button
+                id="alvo"
+                type="button"
+                aria-label="Acertar alvo"
+                hidden
+            ></button>
+        </section>
+    </main>
+</body>
+</html>
